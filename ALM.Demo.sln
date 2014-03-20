@@ -5,6 +5,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALM.Demo", "ALM.Demo\ALM.De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALM.Demo.Tests", "ALM.Demo.Tests\ALM.Demo.Tests.csproj", "{4065B8C1-8DBC-4E9F-9D1B-79F4A0B58439}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{DB842995-653C-4163-8E02-4F98A4097F15}"
+	ProjectSection(SolutionItems) = preProject
+		.build\build.config.xml = .build\build.config.xml
+		.build\build.tasks.compiling.xml = .build\build.tasks.compiling.xml
+		.build\build.tasks.testing.xml = .build\build.tasks.testing.xml
+		.build\build.tasks.versioning.xml = .build\build.tasks.versioning.xml
+		.build\build.xml = .build\build.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{71758A02-E7E0-40F0-BC62-DDB5321F43BD}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "artifacts", "artifacts", "{3282AFAE-83B7-4B8A-8F14-CD035B7AD0B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{61E35E0E-0AAB-41F5-8C16-5DFC5E69501C}"
+	ProjectSection(SolutionItems) = preProject
+		.build\scripts\buildCI.ps1 = .build\scripts\buildCI.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,5 +43,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3282AFAE-83B7-4B8A-8F14-CD035B7AD0B9} = {DB842995-653C-4163-8E02-4F98A4097F15}
+		{61E35E0E-0AAB-41F5-8C16-5DFC5E69501C} = {DB842995-653C-4163-8E02-4F98A4097F15}
 	EndGlobalSection
 EndGlobal
