@@ -1,0 +1,13 @@
+/ALM.Demo/obj
+/ALM.Demo/bin
+/ALM.Demo.Tests/obj
+/ALM.Demo.Tests/bin
+
+/ALM.Demo.ncrunchsolution
+/ALM.Demo.ncrunchsolution.user
+
+/ALM.Demo.sln.DotSettings
+/ALM.Demo.sln.DotSettings.user
+
+/ALM.Demo/ALM.Demo.csproj.user
+/ALM.Demo/ALM.Demo.v11.suo
