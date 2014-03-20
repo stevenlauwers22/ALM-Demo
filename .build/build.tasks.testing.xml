@@ -7,7 +7,7 @@
       <TestAssemblies Include="$(SolutionDir)\ALM.Demo.Tests\bin\$(BuildConfiguration)\ALM.Demo.Tests.dll" />
     </ItemGroup>
 
-    <NUnit Assemblies="@(TestAssemblies)" OutputXmlFile="$(BuildArtifacts)\NUnit\TestResults.$(VersionNumber).xml" ToolPath="$(SolutionDir)\packages\NUnit.Runners.2.6.3\tools">
+    <NUnit Assemblies="@(TestAssemblies)" OutputXmlFile="$(BuildArtifacts)\NUnit\TestResults.xml" ToolPath="$(SolutionDir)\packages\NUnit.Runners.2.6.3\tools">
       <Output TaskParameter="Total" PropertyName="ResultTotal"/>
       <Output TaskParameter="NotRun" PropertyName="ResultNotRun"/>
       <Output TaskParameter="Failures" PropertyName="ResultFailures"/>
