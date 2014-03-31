@@ -4,26 +4,10 @@
   </Target>
   
   <Target Name="build-tasks-deploying-PromoteToAcceptance">
-    <Exec Command="
-      $(OctoExe) deploy-release 
-        --server=$(OctoApiEndpoint) 
-        --apiKey=$(OctoApiKey) 
-        --project=ALM-Demo 
-        --deployto=Acceptance 
-        --version=$(BuildVersion) 
-        --packageversion=$(BuildVersion) 
-        --waitfordeployment" />
+    <Exec Command="$(OctoExe) deploy-release --server=$(OctoApiEndpoint) --apiKey=$(OctoApiKey) --project=ALM-Demo --deployto=Acceptance --version=$(BuildVersion) --packageversion=$(BuildVersion) --waitfordeployment" />
   </Target>
 
   <Target Name="build-tasks-deploying-PromoteToProduction">
-    <Exec Command="
-      $(OctoExe) deploy-release 
-        --server=$(OctoApiEndpoint) 
-        --apiKey=$(OctoApiKey) 
-        --project=ALM-Demo 
-        --deployto=Production 
-        --version=$(BuildVersion) 
-        --packageversion=$(BuildVersion) 
-        --waitfordeployment" />
+    <Exec Command="$(OctoExe) deploy-release --server=$(OctoApiEndpoint) --apiKey=$(OctoApiKey) --project=ALM-Demo --deployto=Production --version=$(BuildVersion) --packageversion=$(BuildVersion) --waitfordeployment" />
   </Target>
 </Project>
