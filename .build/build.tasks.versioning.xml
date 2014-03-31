@@ -8,9 +8,9 @@
 
     <AssemblyInfo 
       AssemblyInfoFiles="@(AssemblyInfoFiles)"
-      AssemblyVersion="$(AssemblyVersion)"
-      AssemblyFileVersion="$(AssemblyVersion)"/>
+      AssemblyVersion="$(BuildVersion)"
+      AssemblyFileVersion="$(BuildVersion)"/>
     
-    <Message Text="##teamcity[buildNumber '$(AssemblyVersion)']" />
+    <Message Text="##teamcity[buildNumber '$(BuildVersion)']" />
   </Target>
 </Project>

@@ -18,8 +18,4 @@
     <BuildVersionRevision Condition="'$(BuildVersionRevision)' == ''">0</BuildVersionRevision>
     <BuildVersion Condition="'$(BuildNumber)' == ''">$(BuildVersionMajor).$(BuildVersionMinor).$(BuildVersionNumber).$(BuildVersionRevision)</BuildVersion>
   </PropertyGroup>
-
-  <PropertyGroup Label="NuGet properties">
-    <NuGetUrl></NuGetUrl>
-  </PropertyGroup>
 </Project>
