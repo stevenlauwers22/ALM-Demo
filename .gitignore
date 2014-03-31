@@ -12,3 +12,5 @@
 /ALM.Demo/ALM.Demo.csproj.user
 /ALM.Demo/ALM.Demo.v11.suo
 /ALM.Demo.v11.suo
+/.build/artifacts/NuGet
+/.build/artifacts/NUnit

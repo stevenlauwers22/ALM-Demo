@@ -18,4 +18,9 @@
     <BuildVersionRevision Condition="'$(BuildVersionRevision)' == ''">0</BuildVersionRevision>
     <BuildVersion Condition="'$(BuildNumber)' == ''">$(BuildVersionMajor).$(BuildVersionMinor).$(BuildVersionNumber).$(BuildVersionRevision)</BuildVersion>
   </PropertyGroup>
+
+  <PropertyGroup Label="Deploy properties">
+    <OctoExe>$(SolutionDir)\pacakges\OctopusTools.2.1.2.37\Octo.exe</OctoExe>
+    <OctoApiKey>API-ADKGVDZFVPLWXAMVDZXJ040MV8</OctoApiKey>
+  </PropertyGroup>
 </Project>
