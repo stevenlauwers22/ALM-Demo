@@ -21,6 +21,7 @@
 
   <PropertyGroup Label="Deploy properties">
     <OctoExe>$(SolutionDir)\pacakges\OctopusTools.2.1.2.37\Octo.exe</OctoExe>
+    <OctoApiEndpoint>http://localhost:8082/api</OctoApiEndpoint>
     <OctoApiKey>API-ADKGVDZFVPLWXAMVDZXJ040MV8</OctoApiKey>
   </PropertyGroup>
 </Project>
