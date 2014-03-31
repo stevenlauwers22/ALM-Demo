@@ -6,14 +6,11 @@
       <AssemblyInfoFiles Include="$(SolutionDir)\**\AssemblyInfo.*"/>
     </ItemGroup>
 
-    <AssemblyInfo
+    <AssemblyInfo 
       AssemblyInfoFiles="@(AssemblyInfoFiles)"
-      AssemblyBuildNumberType="AutoIncrement" AssemblyBuildNumberFormat="0"
-      AssemblyFileBuildNumberType="AutoIncrement" AssemblyFileBuildNumberFormat="0"
-      >
-      <Output TaskParameter="MaxAssemblyVersion" PropertyName="VersionNumber"/>
-    </AssemblyInfo>
-
-    <Message Text="##teamcity[buildNumber '$(VersionNumber)']" />
+      AssemblyVersion="$(AssemblyVersion)"
+      AssemblyFileVersion="$(AssemblyVersion)"/>
+    
+    <Message Text="##teamcity[buildNumber '$(AssemblyVersion)']" />
   </Target>
 </Project>

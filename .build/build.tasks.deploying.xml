@@ -1,0 +1,10 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Target Name="build-tasks-deploying-DeployToTest">
+  </Target>
+  
+  <Target Name="build-tasks-deploying-PromoteToAcceptance">
+  </Target>
+
+  <Target Name="build-tasks-deploying-PromoteToProduction">
+  </Target>
+</Project>

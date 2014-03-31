@@ -3,18 +3,20 @@
   <Import Project="build.config.xml"/>
   
   <!-- TASKS -->
+  <Import Project="build.tasks.versioning.xml"/>
   <Import Project="build.tasks.compiling.xml"/>
   <Import Project="build.tasks.testing.xml"/>
-  <Import Project="build.tasks.versioning.xml"/>
-
+  <Import Project="build.tasks.packaging.xml"/>
+  
   <!-- TARGETS -->
   <Target Name="BuildCI" DependsOnTargets="
-      build-tasks-versioning-UpdateVersionNumber;
-      build-tasks-compiling-Build;
-      build-tasks-testing-RunTests;"
+    build-tasks-versioning-UpdateVersionNumber;
+    build-tasks-compiling-Build;
+    build-tasks-testing-RunTests;
+    build-tasks-packaging-Create;"
   />
 
-  <Target Name="Publish" DependsOnTargets="
-      build-tasks-nuget-Push;"
-  />
+  <Target Name="DeployToTest" DependsOnTargets="build-tasks-deploying-DeployToTest;" />
+  <Target Name="DeployToAcceptance" DependsOnTargets="build-tasks-deploying-DeployToAcceptance;" />
+  <Target Name="DeployToProduction" DependsOnTargets="build-tasks-deploying-DeployToProduction;" />
 </Project>

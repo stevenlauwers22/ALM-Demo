@@ -1,10 +1,25 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <!-- PROPERTIES -->
-  <PropertyGroup>
+  <PropertyGroup Label="Common properties">
     <SolutionDir>..</SolutionDir>
     <SolutionFileName>ALM.Demo.sln</SolutionFileName>
     <SolutionPath>$(SolutionDir)\$(SolutionFileName)</SolutionPath>
-    <BuildArtifacts>$(SolutionDir)\.build\artifacts</BuildArtifacts>
+    <SolutionBuildArtifacts>$(SolutionDir)\.build\artifacts</SolutionBuildArtifacts>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Build properties">
     <BuildConfiguration Condition="'$(BuildConfiguration)' == ''">Release</BuildConfiguration>
+  </PropertyGroup>
+  
+  <PropertyGroup Label="Version properties">
+    <BuildVersionMajor Condition="'$(BuildVersionMajor)' == ''">1</BuildVersionMajor>
+    <BuildVersionMinor Condition="'$(BuildVersionMinor)' == ''">0</BuildVersionMinor>
+    <BuildVersionNumber Condition="'$(BuildVersionNumber)' == ''">0</BuildVersionNumber>
+    <BuildVersionRevision Condition="'$(BuildVersionRevision)' == ''">0</BuildVersionRevision>
+    <BuildVersion Condition="'$(BuildNumber)' == ''">$(BuildVersionMajor).$(BuildVersionMinor).$(BuildVersionNumber).$(BuildVersionRevision)</BuildVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Label="NuGet properties">
+    <NuGetUrl></NuGetUrl>
   </PropertyGroup>
 </Project>
