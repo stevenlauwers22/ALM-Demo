@@ -18,6 +18,6 @@
   />
 
   <Target Name="DeployToTest" DependsOnTargets="build-tasks-deploying-DeployToTest;" />
-  <Target Name="DeployToAcceptance" DependsOnTargets="build-tasks-deploying-DeployToAcceptance;" />
-  <Target Name="DeployToProduction" DependsOnTargets="build-tasks-deploying-DeployToProduction;" />
+  <Target Name="PromoteToAcceptance" DependsOnTargets="build-tasks-deploying-PromoteToAcceptance;" />
+  <Target Name="PromoteToProduction" DependsOnTargets="build-tasks-deploying-PromoteToProduction;" />
 </Project>
