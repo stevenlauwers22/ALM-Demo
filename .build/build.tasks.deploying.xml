@@ -1,13 +1,13 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <Target Name="build-tasks-deploying-DeployToTest">
-    <Exec Command="$(OctoExe) create-release --server=$(OctoApiEndpoint) --apiKey=$(OctoApiKey) --project=ALM-Demo --deployto=Test --version=$(BuildVersion) --packageversion=$(BuildVersion) --waitfordeployment" />
+    <Exec Command="$(OctoExe) create-release --server=$(OctoApiEndpoint) --apiKey=$(OctoApiKey) --project=ALM-Demo --deployto=ALM-Demo-Test --version=$(BuildVersion) --packageversion=$(BuildVersion) --waitfordeployment" />
   </Target>
   
   <Target Name="build-tasks-deploying-PromoteToAcceptance">
-    <Exec Command="$(OctoExe) deploy-release --server=$(OctoApiEndpoint) --apiKey=$(OctoApiKey) --project=ALM-Demo --deployto=Acceptance --version=$(BuildVersion) --waitfordeployment" />
+    <Exec Command="$(OctoExe) deploy-release --server=$(OctoApiEndpoint) --apiKey=$(OctoApiKey) --project=ALM-Demo --deployto=ALM-Demo-Acceptance --version=$(BuildVersion) --waitfordeployment" />
   </Target>
 
   <Target Name="build-tasks-deploying-PromoteToProduction">
-    <Exec Command="$(OctoExe) deploy-release --server=$(OctoApiEndpoint) --apiKey=$(OctoApiKey) --project=ALM-Demo --deployto=Production --version=$(BuildVersion) --waitfordeployment" />
+    <Exec Command="$(OctoExe) deploy-release --server=$(OctoApiEndpoint) --apiKey=$(OctoApiKey) --project=ALM-Demo --deployto=ALM-Demo-Production --version=$(BuildVersion) --waitfordeployment" />
   </Target>
 </Project>
